@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "allayapp",
+    "slug": "allayappapp",
+    "version": "1.0.0",
+    "android": {
+      "package": "com.allayapp"
+    },
+    "ios": {
+      "bundleIdentifier": "com.allayapp"
+    }
+  }
+}
