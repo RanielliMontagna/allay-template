@@ -11,6 +11,8 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
+    "@emotion/native": "^11.11.0",
+    "@emotion/react": "^11.14.0",
     "@react-navigation/native": "^7.1.6",
     "@react-navigation/native-stack": "^7.3.10",
     "expo": "~52.0.46",
