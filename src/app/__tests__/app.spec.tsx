@@ -6,6 +6,6 @@ describe('App', () => {
   it('should render the app', () => {
     const { getByText } = render(<App />)
 
-    expect(getByText('Welcome!')).toBeTruthy()
+    expect(getByText('Home!')).toBeTruthy()
   })
 })
