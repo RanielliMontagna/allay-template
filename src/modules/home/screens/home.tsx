@@ -1,6 +1,7 @@
 import React from 'react'
-import { useTheme } from '@/hooks/useTheme'
+
 import { HomeContainer, Title, ToggleButton, ButtonText } from './home.styles'
+import { useTheme } from '@/hooks/useTheme'
 
 export function Home() {
   const { themeMode, toggleTheme } = useTheme()

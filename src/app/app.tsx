@@ -5,14 +5,17 @@ import { Navigation } from './routes'
 import { initSentry } from '@/shared/config'
 import { LoadingIndicator } from '@/components/common/LoadingIndicator'
 import { createTheme } from '@/theme'
-import { useTheme } from '@/hooks/useTheme'
+import { useAppStore } from '@/shared/stores'
 
 function AppContent() {
-  const { themeMode } = useTheme()
-  const theme = createTheme(themeMode)
+  const { themeMode, initTheme } = useAppStore()
+
+  useEffect(() => {
+    initTheme()
+  }, [])
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={createTheme(themeMode)}>
       <Navigation />
       <LoadingIndicator />
     </ThemeProvider>
