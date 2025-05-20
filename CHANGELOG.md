@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.1.0](https://github.com/RanielliMontagna/allay-template/compare/v1.0.0...v1.1.0) (2025-05-20)
+
+
+### Features
+
+* add dayjs library for date manipulation and localization ([b6dc740](https://github.com/RanielliMontagna/allay-template/commit/b6dc740e724d82f8eeb1a80d7d70b776aff4cb4b))
+* add Sentry integration and environment variable validation ([bc147b3](https://github.com/RanielliMontagna/allay-template/commit/bc147b30e866223512a678c617154d0b36028cba))
+* implement theme toggling and loading indicator ([da4413c](https://github.com/RanielliMontagna/allay-template/commit/da4413c2cd51fa7a569b708a26feda325de46f1e))
+* improve theme ([be62397](https://github.com/RanielliMontagna/allay-template/commit/be6239708c791e8c344fc3a14c2bf6ef824d10e8))
+* refactor configuration structure ([1a44b7c](https://github.com/RanielliMontagna/allay-template/commit/1a44b7cbc3a12adbfc003b35ab222a1bcf245511))
+
 ## 1.0.0 (2025-05-05)
 
 
