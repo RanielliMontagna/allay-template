@@ -10,7 +10,8 @@
       "bundleIdentifier": "com.allayapp"
     },
     "plugins": [
-      "expo-font"
+      "expo-font",
+      "expo-localization"
     ]
   }
 }
