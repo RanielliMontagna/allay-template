@@ -14,7 +14,6 @@ function validateEnv(): Env {
       SENTRY_DSN: process.env.SENTRY_DSN,
     })
   } catch (error) {
-    console.error('❌ Invalid environment variables:', error)
     throw new Error('Invalid environment variables')
   }
 }

@@ -3,7 +3,10 @@ import { env } from '../env/env'
 
 export const initSentry = () => {
   if (!env.SENTRY_DSN) {
-    console.log('Sentry DSN not provided, skipping initialization')
+    if (env.NODE_ENV === 'development') {
+      console.log('Sentry DSN not provided, skipping initialization')
+    }
+
     return
   }
 

@@ -10,7 +10,7 @@ export function Home() {
 
   return (
     <HomeContainer>
-      <Title>
+      <Title testID="current-theme">
         {t('home.currentTheme')}:{' '}
         {themeMode === 'dark' ? t('home.darkMode') : t('home.lightMode')}
       </Title>

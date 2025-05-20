@@ -1,13 +1,25 @@
 import { theme } from '@/theme'
 import { ThemeProvider } from '@emotion/react'
 import { QueryClientProvider } from '@tanstack/react-query'
-import { type RenderOptions, render } from '@testing-library/react-native'
-import { queryClient } from '../config'
+import {
+  type RenderOptions,
+  render,
+  renderHook,
+} from '@testing-library/react-native'
+import { i18n, initI18n, queryClient } from '../config'
+import { I18nextProvider } from 'react-i18next'
+
+beforeAll(async () => {
+  await initI18n()
+  await i18n.changeLanguage('en')
+})
 
 const Wrapper = ({ children }: { children: React.ReactNode }) => (
-  <QueryClientProvider client={queryClient}>
-    <ThemeProvider theme={theme}>{children}</ThemeProvider>
-  </QueryClientProvider>
+  <I18nextProvider i18n={i18n}>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    </QueryClientProvider>
+  </I18nextProvider>
 )
 
 const renderWithProviders = (ui: React.ReactElement, options?: RenderOptions) =>
@@ -16,5 +28,10 @@ const renderWithProviders = (ui: React.ReactElement, options?: RenderOptions) =>
     ...options,
   })
 
+const renderHookWithProviders = <TResult, TProps>(
+  hook: (initialProps: TProps) => TResult,
+  options?: RenderOptions,
+) => renderHook(hook, { wrapper: Wrapper, ...options })
+
 export * from '@testing-library/react-native'
-export { renderWithProviders as render }
+export { renderWithProviders as render, renderHookWithProviders as renderHook }

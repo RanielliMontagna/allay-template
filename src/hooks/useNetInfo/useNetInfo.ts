@@ -8,7 +8,7 @@ export function useNetInfo() {
 
   useEffect(() => {
     const unsubscribe = NetInfo.addEventListener(state => {
-      return setIsConnected(state.isConnected ?? false)
+      return setIsConnected(Boolean(state.isConnected))
     })
 
     // Cleanup the subscription on unmount
