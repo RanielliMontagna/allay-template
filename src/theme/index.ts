@@ -1,7 +1,7 @@
 import { colors } from './colors'
-import { typography } from './typography'
-import { spacing } from './spacing'
 import { radius } from './radius'
+import { spacing } from './spacing'
+import { typography } from './typography'
 
 export type ThemeMode = 'light' | 'dark'
 

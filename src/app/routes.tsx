@@ -6,9 +6,7 @@ import { Home } from '@/modules/home'
 const RootStack = createNativeStackNavigator({
   initialRouteName: 'Home',
   screenOptions: { headerShown: false },
-  screens: {
-    Home,
-  },
+  screens: { Home },
 })
 
 export const Navigation = createStaticNavigation(RootStack)
