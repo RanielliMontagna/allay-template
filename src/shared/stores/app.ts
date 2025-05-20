@@ -5,9 +5,11 @@ export type ThemeMode = 'light' | 'dark'
 
 interface AppState {
   isLoading: boolean
+  isConnected: boolean
   themeMode: ThemeMode
   setLoading: (loading: boolean) => void
   setTheme: (mode: ThemeMode) => Promise<void>
+  setIsConnected: (isConnected: boolean) => void
   toggleTheme: () => Promise<void>
   initTheme: () => Promise<void>
 }
@@ -15,10 +17,12 @@ interface AppState {
 const THEME_STORAGE_KEY = '@theme_mode'
 
 export const useAppStore = create<AppState>()((set, get) => ({
+  isConnected: true,
   isLoading: false,
   themeMode: 'light',
 
   setLoading: (loading: boolean) => set({ isLoading: loading }),
+  setIsConnected: isConnected => set({ isConnected }),
 
   setTheme: async (mode: ThemeMode) => {
     set({ themeMode: mode })

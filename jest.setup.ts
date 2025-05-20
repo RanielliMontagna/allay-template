@@ -5,3 +5,6 @@ jest.mock('@react-native-async-storage/async-storage', () => ({
   removeItem: jest.fn(),
   clear: jest.fn(),
 }))
+
+// Mock Sentry
+jest.mock('@sentry/react-native')
