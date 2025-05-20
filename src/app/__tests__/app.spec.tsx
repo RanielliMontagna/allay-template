@@ -1,5 +1,4 @@
-import { render } from '@testing-library/react-native'
-
+import { render } from '@/shared/utils/jest'
 import { App } from '../app'
 
 describe('App', () => {

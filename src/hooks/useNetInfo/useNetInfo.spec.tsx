@@ -1,6 +1,6 @@
 import { useAppStore } from '@/shared/stores'
+import { renderHook } from '@/shared/utils/jest'
 import NetInfo from '@react-native-community/netinfo'
-import { renderHook } from '@testing-library/react-native'
 import { useNetInfo } from './useNetInfo'
 
 jest.mock('@react-native-community/netinfo', () => ({

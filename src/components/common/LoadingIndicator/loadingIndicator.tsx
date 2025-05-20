@@ -12,7 +12,11 @@ export const LoadingIndicator: React.FC = () => {
 
   return (
     <View style={styles.container}>
-      <ActivityIndicator size="large" color={theme.colors.primary} />
+      <ActivityIndicator
+        testID="ActivityIndicator"
+        size="large"
+        color={theme.colors.primary}
+      />
     </View>
   )
 }
