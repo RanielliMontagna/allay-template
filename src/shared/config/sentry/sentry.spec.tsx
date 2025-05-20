@@ -1,6 +1,6 @@
 // __tests__/lib/sentry.test.ts
 import * as Sentry from '@sentry/react-native'
-import { initSentry, captureException, captureMessage } from './sentry'
+import { captureException, captureMessage, initSentry } from './sentry'
 
 jest.mock('@sentry/react-native', () => ({
   init: jest.fn(),

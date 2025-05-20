@@ -6,8 +6,8 @@ import {
   render,
   renderHook,
 } from '@testing-library/react-native'
-import { i18n, initI18n, queryClient } from '../config'
 import { I18nextProvider } from 'react-i18next'
+import { i18n, initI18n, queryClient } from '../config'
 
 beforeAll(async () => {
   await initI18n()

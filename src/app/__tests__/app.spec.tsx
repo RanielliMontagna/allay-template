@@ -1,6 +1,6 @@
+import translations from '@/locales/en-US'
 import { render, waitFor } from '@/shared/utils/jest'
 import { App } from '../app'
-import translations from '@/locales/en-US'
 
 describe('App', () => {
   it('should render the app', async () => {

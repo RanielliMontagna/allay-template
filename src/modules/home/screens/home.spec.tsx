@@ -1,7 +1,7 @@
 import { act, fireEvent, render } from '@/shared/utils/jest'
 
-import { Home } from './home'
 import translations from '@/locales/en-US'
+import { Home } from './home'
 
 describe('Home', () => {
   it('should render the home screen', () => {

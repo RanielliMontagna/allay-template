@@ -5,7 +5,6 @@ import { initReactI18next } from 'react-i18next'
 
 import translationEn from '@/locales/en-US'
 import translationPt from '@/locales/pt-BR'
-import { env } from '../env/env'
 
 const resources = {
   'pt-BR': { translation: translationPt },
@@ -14,16 +13,15 @@ const resources = {
 
 const initI18n = async () => {
   let savedLanguage = await AsyncStorage.getItem('language')
+  const languageTag = Localization.getLocales()[0]?.languageTag
 
-  if (!savedLanguage) {
-    savedLanguage = Localization.locale
-  }
+  if (!savedLanguage) savedLanguage = languageTag
 
   i18n.use(initReactI18next).init({
     compatibilityJSON: 'v4',
     resources,
     lng: savedLanguage,
-    fallbackLng: env.NODE_ENV === 'test' ? 'en-US' : 'pt-BR',
+    fallbackLng: 'en-US',
     interpolation: {
       escapeValue: false,
     },
