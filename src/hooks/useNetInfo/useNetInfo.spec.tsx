@@ -22,7 +22,7 @@ describe('useNetInfo', () => {
     })
   })
 
-  it('deve inscrever e desinscrever corretamente do NetInfo', () => {
+  it('should correctly subscribe and unsubscribe from NetInfo', () => {
     const mockUnsubscribe = jest.fn()
     ;(NetInfo.addEventListener as jest.Mock).mockImplementation(callback => {
       callback({ isConnected: true })
