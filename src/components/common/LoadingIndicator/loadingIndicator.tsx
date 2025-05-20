@@ -1,8 +1,8 @@
 import type React from 'react'
 import { ActivityIndicator, StyleSheet, View } from 'react-native'
 
-import { useTheme } from '@/hooks/useTheme'
-import { useAppStore } from '@/shared/stores/app'
+import { useTheme } from '@/hooks'
+import { useAppStore } from '@/shared/stores/app/app'
 
 export const LoadingIndicator: React.FC = () => {
   const { theme } = useTheme()
@@ -12,7 +12,11 @@ export const LoadingIndicator: React.FC = () => {
 
   return (
     <View style={styles.container}>
-      <ActivityIndicator size="large" color={theme.colors.primary} />
+      <ActivityIndicator
+        testID="ActivityIndicator"
+        size="large"
+        color={theme.colors.primary}
+      />
     </View>
   )
 }

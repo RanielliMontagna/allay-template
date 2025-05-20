@@ -8,6 +8,10 @@
     },
     "ios": {
       "bundleIdentifier": "com.allayapp"
-    }
+    },
+    "plugins": [
+      "expo-font",
+      "expo-localization"
+    ]
   }
 }

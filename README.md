@@ -83,13 +83,11 @@ yarn start
 | `staging`   | Homologação                          |
 | `feature/*` | Novas funcionalidades (ex: STK-1234) |
 | `fix/*`     | Correções de bugs                    |
-| `hotfix/*`  | Correções críticas em produção       |
 | `release/*` | Preparação para deploy               |
 
 ### Convenções de Código
 
 - Seguir o padrão de commits convencionais
-- Utilizar ESLint e Prettier para formatação
 - Manter a documentação atualizada
 
 ## 🧪 Qualidade e Testes
@@ -112,12 +110,13 @@ yarn start
 
 ## 🔗 Referências
 
-- [React Native](https://reactnative.dev/)
-- [Conventional Commits](https://www.conventionalcommits.org)
-- [React Navigation](https://reactnavigation.org/)
-- [Jest](https://jestjs.io/)
-- [ESLint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
+- [React Native](https://reactnative.dev/) - Tecnologia base do projeto
+- [Conventional Commits](https://www.conventionalcommits.org) - Padrão de commits
+- [React Navigation](https://reactnavigation.org/) - Navegação do aplicativo
+- [Jest](https://jestjs.io/) - Framework de testes
+- [Biome](https://biomejs.dev/) - Ferramenta de linting e formatação
+- [React Query](https://react-query.tanstack.com/) - Gerenciamento de estado e requisições
+
 
 ## 📄 Licença
 
