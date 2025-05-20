@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.2.0](https://github.com/RanielliMontagna/allay-template/compare/v1.1.0...v1.2.0) (2025-05-20)
+
+
+### Features
+
+* add expo-font dependency and update app.json plugins ([11caa27](https://github.com/RanielliMontagna/allay-template/commit/11caa272abc81c484bbca05068aaa929598cfefc))
+* add integrations ([59577c2](https://github.com/RanielliMontagna/allay-template/commit/59577c29369ed26e517a7aa5f638c791ae7cf023))
+* add internationalization support with i18next and localization ([f8b8b6f](https://github.com/RanielliMontagna/allay-template/commit/f8b8b6f2eb9e931707f79f7d4ecab55514ee138f))
+* add useNetInfo hook and integrate NetInfo ([0ea002a](https://github.com/RanielliMontagna/allay-template/commit/0ea002adf1c48925d1d192d407d0c8fc9664948a))
+* enhance testing utilities and add tests for useQuery  and home ([b59f412](https://github.com/RanielliMontagna/allay-template/commit/b59f4122c3c6ad976d5354f07fed6ad641dd7621))
+* integrate React Query for data fetching and state management ([d0ae382](https://github.com/RanielliMontagna/allay-template/commit/d0ae3824b8fb68963b25f1c1ee527eaac97d7a89))
+* refactor testing utilities and add tests in loading component ([f8693e4](https://github.com/RanielliMontagna/allay-template/commit/f8693e4e3bd5a31741d3ef3b43410a9ffe44a96f))
+
 ## [1.1.0](https://github.com/RanielliMontagna/allay-template/compare/v1.0.0...v1.1.0) (2025-05-20)
 
 
