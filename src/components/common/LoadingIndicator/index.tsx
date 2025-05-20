@@ -1,7 +1,7 @@
 import type React from 'react'
 import { ActivityIndicator, StyleSheet, View } from 'react-native'
 
-import { useTheme } from '@/hooks/useTheme'
+import { useTheme } from '@/hooks'
 import { useAppStore } from '@/shared/stores/app'
 
 export const LoadingIndicator: React.FC = () => {

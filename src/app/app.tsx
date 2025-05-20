@@ -1,8 +1,9 @@
 import { ThemeProvider } from '@emotion/react'
+import { QueryClientProvider } from '@tanstack/react-query'
 import React, { useEffect } from 'react'
 
 import { LoadingIndicator } from '@/components/common/LoadingIndicator'
-import { initSentry } from '@/shared/config'
+import { initSentry, queryClient } from '@/shared/config'
 import { useAppStore } from '@/shared/stores'
 import { createTheme } from '@/theme'
 import { Navigation } from './routes'
@@ -15,10 +16,12 @@ function AppContent() {
   }, [initTheme])
 
   return (
-    <ThemeProvider theme={createTheme(themeMode)}>
-      <Navigation />
-      <LoadingIndicator />
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider theme={createTheme(themeMode)}>
+        <Navigation />
+        <LoadingIndicator />
+      </ThemeProvider>
+    </QueryClientProvider>
   )
 }
 

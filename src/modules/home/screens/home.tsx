@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { useTheme } from '@/hooks/useTheme'
+import { useTheme } from '@/hooks'
 import { ButtonText, HomeContainer, Title, ToggleButton } from './home.styles'
 
 export function Home() {
