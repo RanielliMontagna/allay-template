@@ -4,24 +4,23 @@ export const HomeContainer = styled.View`
   flex: 1;
   justify-content: center;
   align-items: center;
-  background-color: ${props => props.theme.colors.background};
-  padding: ${props => `${props.theme.spacing[4]}px`};
+  background-color: ${({ theme }) => theme.colors.background};
+  padding: ${({ theme }) => theme.spacing[4]};
 `
 
 export const Title = styled.Text`
-  font-size: ${props => `${props.theme.typography.fontSize.xl}px`};
-  color: ${props => props.theme.colors.text};
-  margin-bottom: ${props => `${props.theme.spacing[4]}px`};
+  font-size: ${({ theme }) => theme.typography.fontSize.xl};
+  color: ${({ theme }) => theme.colors.text};
+  margin-bottom: ${({ theme }) => theme.spacing[4]};
 `
 
 export const ToggleButton = styled.TouchableOpacity`
-  background-color: ${props => props.theme.colors.primary};
-  padding: ${props =>
-    `${props.theme.spacing[2]}px ${props.theme.spacing[4]}px`};
-  border-radius: ${props => `${props.theme.spacing[2]}px`};
+  background-color: ${({ theme }) => theme.colors.primary};
+  padding: ${({ theme }) => theme.spacing[2]};
+  border-radius: ${({ theme }) => theme.radius.md};
 `
 
 export const ButtonText = styled.Text`
-  color: white;
-  font-size: ${props => `${props.theme.typography.fontSize.md}px`};
+  color: ${({ theme }) => theme.colors.white};
+  font-size: ${({ theme }) => theme.typography.fontSize.md};
 `

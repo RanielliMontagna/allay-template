@@ -9,3 +9,7 @@ export const radius = {
   '3xl': 24,
   full: 9999,
 }
+
+export const radiusWithPx = Object.fromEntries(
+  Object.entries(radius).map(([key, value]) => [key, `${value}px`]),
+) as Record<keyof typeof radius, string>

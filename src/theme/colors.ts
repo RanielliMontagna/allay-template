@@ -19,6 +19,8 @@ const lightColors = {
     800: '#1F2937',
     900: '#111827',
   },
+  white: '#FFFFFF',
+  black: '#000000',
 }
 
 const darkColors = {
@@ -42,6 +44,8 @@ const darkColors = {
     800: '#F3F4F6',
     900: '#F9FAFB',
   },
+  white: '#FFFFFF',
+  black: '#000000',
 }
 
 export const colors = {

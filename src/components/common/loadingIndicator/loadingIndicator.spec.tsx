@@ -19,6 +19,6 @@ describe('LoadingIndicator', () => {
 
     rerender(<LoadingIndicator />)
 
-    expect(getByTestId('ActivityIndicator')).toBeTruthy()
+    expect(getByTestId('activity-indicator')).toBeTruthy()
   })
 })

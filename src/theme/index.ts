@@ -1,6 +1,6 @@
 import { colors } from './colors'
-import { radius } from './radius'
-import { spacing } from './spacing'
+import { radiusWithPx } from './radius'
+import { spacingWithPx } from './spacing'
 import { typography } from './typography'
 
 export type ThemeMode = 'light' | 'dark'
@@ -8,8 +8,8 @@ export type ThemeMode = 'light' | 'dark'
 export const createTheme = (mode: ThemeMode = 'light') => ({
   colors: colors[mode],
   typography,
-  spacing,
-  radius,
+  spacing: spacingWithPx,
+  radius: radiusWithPx,
   mode,
 })
 

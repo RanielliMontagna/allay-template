@@ -5,16 +5,19 @@ import { I18nextProvider } from 'react-i18next'
 
 import * as SplashScreen from 'expo-splash-screen'
 
-import { LoadingIndicator } from '@/components'
+import { LoadingIndicator, OfflineBar } from '@/components'
 import { i18n, initI18n, initSentry, queryClient } from '@/shared/config'
 
 import { useAppStore } from '@/shared/stores'
 import { createTheme } from '@/theme'
 import { Navigation } from './routes'
+import { useNetInfo } from '@/hooks'
 
 SplashScreen.preventAutoHideAsync()
 
 function AppContent() {
+  
+
   const { themeMode, initTheme } = useAppStore()
   const [isReady, setIsReady] = useState(false)
 
@@ -39,6 +42,7 @@ function AppContent() {
         <ThemeProvider theme={createTheme(themeMode)}>
           <Navigation />
           <LoadingIndicator />
+          <OfflineBar />
         </ThemeProvider>
       </QueryClientProvider>
     </I18nextProvider>
