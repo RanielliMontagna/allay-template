@@ -1,4 +1,5 @@
 import React from 'react'
+import { FadeInDown } from 'react-native-reanimated'
 import { OfflineBarContainer, OfflineBarText } from './offlineBar.styles'
 
 import { useAppStore } from '@/shared/stores'
@@ -16,7 +17,7 @@ const OfflineBar = () => {
   if (isConnected) return null
 
   return (
-    <OfflineBarContainer testID="offline-bar">
+    <OfflineBarContainer entering={FadeInDown} testID="offline-bar">
       <OfflineBarText>OFFLINE MODE</OfflineBarText>
     </OfflineBarContainer>
   )

@@ -1,6 +1,7 @@
 import styled from '@emotion/native'
+import Animated from 'react-native-reanimated'
 
-export const OfflineBarContainer = styled.View`
+export const OfflineBarContainer = styled(Animated.View)`
     justify-content: center;
     align-items: center;
     padding: ${({ theme }) => theme.spacing[2]};
