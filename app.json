@@ -1,17 +1,23 @@
 {
   "expo": {
+    "newArchEnabled": true,
     "name": "allayapp",
-    "slug": "allayappapp",
+    "description": "A template for building a React Native app with Expo.",
+    "slug": "allayapp",
     "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/icon.png",
+    "splash": {
+      "image": "./src/assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#111827"
+    },
     "android": {
       "package": "com.allayapp"
     },
     "ios": {
       "bundleIdentifier": "com.allayapp"
     },
-    "plugins": [
-      "expo-font",
-      "expo-localization"
-    ]
+    "plugins": ["expo-font", "expo-splash-screen"]
   }
 }

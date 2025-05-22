@@ -35,3 +35,7 @@ export const spacing = {
   80: 320,
   96: 384,
 }
+
+export const spacingWithPx = Object.fromEntries(
+  Object.entries(spacing).map(([key, value]) => [key, `${value}px`]),
+) as Record<keyof typeof spacing, string>

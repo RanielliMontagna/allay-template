@@ -1,3 +1,5 @@
+import mockSafeAreaContext from 'react-native-safe-area-context/jest/mock'
+
 // Mock AsyncStorage
 jest.mock('@react-native-async-storage/async-storage', () => ({
   setItem: jest.fn(),
@@ -8,3 +10,6 @@ jest.mock('@react-native-async-storage/async-storage', () => ({
 
 // Mock Sentry
 jest.mock('@sentry/react-native')
+
+// Mock safe area context
+jest.mock('react-native-safe-area-context', () => mockSafeAreaContext)
