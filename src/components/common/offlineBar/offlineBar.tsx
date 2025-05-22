@@ -2,8 +2,8 @@ import React from 'react'
 import { FadeInDown } from 'react-native-reanimated'
 import { OfflineBarContainer, OfflineBarText } from './offlineBar.styles'
 
-import { useAppStore } from '@/shared/stores'
 import { useNetInfo } from '@/hooks'
+import { useAppStore } from '@/shared/stores'
 
 const OfflineBar = () => {
   // Hook with isolated instance of network info manager

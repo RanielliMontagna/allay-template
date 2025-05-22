@@ -10,6 +10,8 @@ import { i18n, initI18n, initSentry, queryClient } from '@/shared/config'
 
 import { useAppStore } from '@/shared/stores'
 import { createTheme } from '@/theme'
+import { StatusBar } from 'react-native'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { Navigation } from './routes'
 
 SplashScreen.preventAutoHideAsync()
@@ -34,15 +36,22 @@ function AppContent() {
   if (!isReady) return <LoadingIndicator />
 
   return (
-    <I18nextProvider i18n={i18n}>
-      <QueryClientProvider client={queryClient}>
-        <ThemeProvider theme={createTheme(themeMode)}>
-          <Navigation />
-          <LoadingIndicator />
-          <OfflineBar />
-        </ThemeProvider>
-      </QueryClientProvider>
-    </I18nextProvider>
+    <SafeAreaProvider>
+      <StatusBar
+        barStyle={themeMode === 'dark' ? 'light-content' : 'dark-content'}
+        backgroundColor="transparent"
+        translucent
+      />
+      <I18nextProvider i18n={i18n}>
+        <QueryClientProvider client={queryClient}>
+          <ThemeProvider theme={createTheme(themeMode)}>
+            <Navigation />
+            <LoadingIndicator />
+            <OfflineBar />
+          </ThemeProvider>
+        </QueryClientProvider>
+      </I18nextProvider>
+    </SafeAreaProvider>
   )
 }
 
