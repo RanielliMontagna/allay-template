@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.3.0](https://github.com/RanielliMontagna/allay-template/compare/v1.2.0...v1.3.0) (2025-05-22)
+
+
+### Features
+
+* add react-native-reanimated and integrate into OfflineBar component ([e2abb99](https://github.com/RanielliMontagna/allay-template/commit/e2abb99b4278fb0f14bf5c48b05882c43d0a27b9))
+* enhance app structure with SafeAreaProvider and StatusBar ([87e6944](https://github.com/RanielliMontagna/allay-template/commit/87e6944408fdecd6c5a35a36c756541b7d2e49b9))
+* implement splash screen with updated styles and assets ([ec3c577](https://github.com/RanielliMontagna/allay-template/commit/ec3c577cf42c94804ede895c53d65b687e07a705))
+* refactor LoadingIndicator and add OfflineBar component ([1df0f54](https://github.com/RanielliMontagna/allay-template/commit/1df0f549cc1e75fb0733044878242e7384816f34))
+* update dependencies and add react-dom and react-native-web ([70efdf9](https://github.com/RanielliMontagna/allay-template/commit/70efdf9cf7597b60007667541ff24f38f6ff64ce))
+* update MainActivity and styles for splash screen integration ([eb3f4ae](https://github.com/RanielliMontagna/allay-template/commit/eb3f4aec922ca5cb171ff00b903f43b801d7850a))
+
+
+### Bug Fixes
+
+* downgrade @react-native-async-storage/async-storage and @sentry/react-native dependencies for compatibility ([d24b976](https://github.com/RanielliMontagna/allay-template/commit/d24b976a7f722a6e6735c80c3d805c66ca0fe497))
+
 ## [1.2.0](https://github.com/RanielliMontagna/allay-template/compare/v1.1.0...v1.2.0) (2025-05-20)
 
 
