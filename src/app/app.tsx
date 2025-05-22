@@ -11,13 +11,10 @@ import { i18n, initI18n, initSentry, queryClient } from '@/shared/config'
 import { useAppStore } from '@/shared/stores'
 import { createTheme } from '@/theme'
 import { Navigation } from './routes'
-import { useNetInfo } from '@/hooks'
 
 SplashScreen.preventAutoHideAsync()
 
 function AppContent() {
-  
-
   const { themeMode, initTheme } = useAppStore()
   const [isReady, setIsReady] = useState(false)
 
