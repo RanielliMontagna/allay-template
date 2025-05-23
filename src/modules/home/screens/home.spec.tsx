@@ -20,5 +20,13 @@ describe('Home', () => {
     expect(await getByTestId('current-theme')).toHaveTextContent(
       `${translations.home.currentTheme}: ${translations.home.darkMode}`,
     )
+
+    act(() => {
+      fireEvent.press(getByText(translations.home.changeTheme))
+    })
+
+    expect(await getByTestId('current-theme')).toHaveTextContent(
+      `${translations.home.currentTheme}: ${translations.home.lightMode}`,
+    )
   })
 })

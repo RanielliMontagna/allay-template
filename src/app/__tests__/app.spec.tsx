@@ -1,7 +1,7 @@
 import translations from '@/locales/en-US'
+import { useAppStore } from '@/shared/stores'
 import { act, render, waitFor } from '@/shared/utils/jest'
 import { App } from '../app'
-import { useAppStore } from '@/shared/stores'
 
 describe('App', () => {
   it('should render the app', async () => {

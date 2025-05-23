@@ -2,11 +2,18 @@ import { ThemeProvider } from '@emotion/react'
 import { QueryClientProvider } from '@tanstack/react-query'
 import React, { useEffect, useState } from 'react'
 import { I18nextProvider } from 'react-i18next'
+import Toast from 'react-native-toast-message'
 
 import * as SplashScreen from 'expo-splash-screen'
 
 import { LoadingIndicator, OfflineBar } from '@/components'
-import { i18n, initI18n, initSentry, queryClient } from '@/shared/config'
+import {
+  i18n,
+  initI18n,
+  initSentry,
+  queryClient,
+  toastConfig,
+} from '@/shared/config'
 
 import { useAppStore } from '@/shared/stores'
 import { createTheme } from '@/theme'
@@ -48,6 +55,7 @@ function AppContent() {
             <Navigation />
             <LoadingIndicator />
             <OfflineBar />
+            <Toast config={toastConfig} position="bottom" swipeable />
           </ThemeProvider>
         </QueryClientProvider>
       </I18nextProvider>
