@@ -1,3 +1,4 @@
+import { useTheme } from '@emotion/react'
 import type {
   BaseToastProps,
   ToastConfig,
@@ -8,7 +9,6 @@ import {
   CustomInfoToast,
   CustomSuccessToast,
 } from './toast-message.styles'
-import { useTheme } from '@emotion/react'
 
 const SuccessToast = (props: ToastConfigParams<BaseToastProps>) => {
   const theme = useTheme()

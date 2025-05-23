@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Toast from 'react-native-toast-message'
 
 import { useTheme } from '@/hooks'
