@@ -1,12 +1,12 @@
-import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import Ionicons from '@react-native-vector-icons/ionicons'
 
+import { useTheme } from '@/hooks'
 import { Home } from '@/modules/home'
 import { Settings } from '@/modules/settings'
-import { useTheme } from '@/hooks'
 
 const Tab = createBottomTabNavigator()
 const Stack = createNativeStackNavigator()

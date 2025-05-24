@@ -15,6 +15,13 @@ const fontSize = {
   '4xl': 36,
 }
 
+const fontWeight = {
+  light: '300',
+  regular: '400',
+  medium: '500',
+  bold: '700',
+}
+
 const fontSizeWithPx = Object.fromEntries(
   Object.entries(fontSize).map(([key, value]) => [key, `${value}px`]),
 ) as Record<keyof typeof fontSize, string>
@@ -37,5 +44,11 @@ const lineHeightWithPx = Object.fromEntries(
 export const typography = {
   fontFamily,
   fontSize: fontSizeWithPx,
+  fontWeight,
   lineHeight: lineHeightWithPx,
 }
+
+export type FontFamily = typeof fontFamily
+export type FontSize = typeof fontSizeWithPx
+export type FontWeight = typeof fontWeight
+export type LineHeight = typeof lineHeightWithPx

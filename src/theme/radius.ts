@@ -13,3 +13,5 @@ export const radius = {
 export const radiusWithPx = Object.fromEntries(
   Object.entries(radius).map(([key, value]) => [key, `${value}px`]),
 ) as Record<keyof typeof radius, string>
+
+export type Radius = typeof radiusWithPx

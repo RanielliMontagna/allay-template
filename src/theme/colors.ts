@@ -52,3 +52,9 @@ export const colors = {
   light: lightColors,
   dark: darkColors,
 }
+
+export type Color = keyof typeof lightColors | keyof typeof darkColors
+export type Colors = typeof lightColors | typeof darkColors
+type GrayKey = keyof typeof lightColors.gray
+export type GrayColor = `gray.${GrayKey}`
+export type ColorKey = keyof typeof lightColors | GrayColor
