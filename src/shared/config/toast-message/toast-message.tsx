@@ -17,7 +17,7 @@ const SuccessToast = (props: ToastConfigParams<BaseToastProps>) => {
     <CustomSuccessToast
       {...props}
       text1Style={{ color: theme.colors.text }}
-      text2Style={{ color: theme.colors.text }}
+      text2Style={{ color: theme.colors.gray[600] }}
     />
   )
 }
@@ -29,7 +29,7 @@ const ErrorToast = (props: ToastConfigParams<BaseToastProps>) => {
     <CustomErrorToast
       {...props}
       text1Style={{ color: theme.colors.text }}
-      text2Style={{ color: theme.colors.text }}
+      text2Style={{ color: theme.colors.gray[600] }}
     />
   )
 }
@@ -41,7 +41,7 @@ const InfoToast = (props: ToastConfigParams<BaseToastProps>) => {
     <CustomInfoToast
       {...props}
       text1Style={{ color: theme.colors.text }}
-      text2Style={{ color: theme.colors.text }}
+      text2Style={{ color: theme.colors.gray[600] }}
     />
   )
 }

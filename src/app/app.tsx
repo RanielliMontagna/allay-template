@@ -55,7 +55,7 @@ function AppContent() {
             <Navigation />
             <LoadingIndicator />
             <OfflineBar />
-            <Toast config={toastConfig} position="bottom" swipeable />
+            <Toast config={toastConfig} position="bottom" bottomOffset={58} />
           </ThemeProvider>
         </QueryClientProvider>
       </I18nextProvider>
