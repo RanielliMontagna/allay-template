@@ -1,11 +1,11 @@
 import styled from '@emotion/native'
-import type { CustomButtonProps } from './button.types'
+import type { StyledButtonProps } from './button.types'
 
 import { resolveColor } from '@/shared/utils/resolveColor'
 import { TouchableOpacity } from 'react-native'
 import { getButtonPadding } from './button.helper'
 
-export const ButtonContainer = styled(TouchableOpacity)<CustomButtonProps>`
+export const ButtonContainer = styled(TouchableOpacity)<StyledButtonProps>`
   position: relative;
   flex-direction: row;
   align-items: center;
@@ -14,18 +14,18 @@ export const ButtonContainer = styled(TouchableOpacity)<CustomButtonProps>`
   background-color: ${({ theme, variant, colorScheme }) =>
     variant === 'outline' || variant === 'ghost'
       ? 'transparent'
-      : resolveColor(theme, colorScheme ?? 'primary')};
+      : resolveColor(theme, colorScheme)};
   border: ${({ variant, theme, colorScheme }) =>
     variant === 'outline'
-      ? `1px solid ${resolveColor(theme, colorScheme ?? 'primary')}`
+      ? `1px solid ${resolveColor(theme, colorScheme)}`
       : 'none'};
 
   ${({ disabled }) => disabled && 'opacity: 0.5;'}
-  ${({ size }) => getButtonPadding(size ?? 'md')}
+  ${({ size }) => getButtonPadding(size)}
   ${({ fullWidth }) => fullWidth && 'width: 100%;'}
 `
 
-export const ButtonText = styled.Text<CustomButtonProps>`
+export const ButtonText = styled.Text<StyledButtonProps>`
   font-size: ${({ size, theme }) =>
     size === 'sm'
       ? theme.typography.fontSize.sm
@@ -36,7 +36,7 @@ export const ButtonText = styled.Text<CustomButtonProps>`
   color: ${({ theme, variant, colorScheme }) =>
     variant === 'solid'
       ? theme.colors.white
-      : resolveColor(theme, colorScheme ?? 'primary')};
+      : resolveColor(theme, colorScheme)};
   ${({ isLoading }) => isLoading && 'opacity: 0;'}
 `
 
@@ -45,4 +45,4 @@ export const LoadingOverlay = styled.View`
   inset: 0;
   justify-content: center;
   align-items: center;
-`;
+`

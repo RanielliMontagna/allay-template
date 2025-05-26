@@ -14,3 +14,11 @@ export interface CustomButtonProps extends TouchableOpacityProps {
   startAdornment?: React.ReactNode
   fullWidth?: boolean
 }
+
+export type StyledButtonProps = Omit<
+  CustomButtonProps,
+  'colorScheme' | 'size'
+> & {
+  colorScheme: ColorKey
+  size: ButtonSize
+}
