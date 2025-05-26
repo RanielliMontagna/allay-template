@@ -26,3 +26,5 @@ export const Text: React.FC<TextProps> = ({
     </StyledText>
   )
 }
+
+Text.displayName = 'Text'

@@ -1,10 +1,12 @@
+import Ionicons from '@react-native-vector-icons/ionicons'
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import Toast from 'react-native-toast-message'
 
-import { Text } from '@/components'
+import { Button, Text } from '@/components'
 import { useTheme } from '@/hooks'
-import { useTranslation } from 'react-i18next'
-import { ButtonText, HomeContainer, ToggleButton } from './home.styles'
+
+import { HomeContainer } from './home.styles'
 
 export function Home() {
   const { t } = useTranslation()
@@ -27,9 +29,18 @@ export function Home() {
         {t('home.currentTheme')}:{' '}
         {themeMode === 'dark' ? t('home.darkMode') : t('home.lightMode')}
       </Text>
-      <ToggleButton onPress={handleThemeChange}>
-        <ButtonText>{t('home.changeTheme')}</ButtonText>
-      </ToggleButton>
+      <Button
+        startAdornment={
+          <Ionicons
+            name={themeMode === 'dark' ? 'sunny' : 'moon'}
+            size={18}
+            color="white"
+          />
+        }
+        onPress={handleThemeChange}
+      >
+        {t('home.changeTheme')}
+      </Button>
     </HomeContainer>
   )
 }

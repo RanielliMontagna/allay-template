@@ -2,20 +2,7 @@ import styled from '@emotion/native'
 import Animated from 'react-native-reanimated'
 import type { CustomTextProps } from './text.types'
 
-type ThemeWithColors = {
-  colors: {
-    gray: Record<string, string>
-    [key: string]: string | Record<string, string>
-  }
-}
-const resolveColor = (theme: ThemeWithColors, color: string) => {
-  if (color?.startsWith('gray.')) {
-    const shade = color.split('.')[1]
-    return theme.colors.gray[shade]
-  }
-
-  return theme.colors[color] as string
-}
+import { resolveColor } from '@/shared/utils/resolveColor'
 
 export const StyledText = styled(Animated.Text)<CustomTextProps>`
   font-size: ${({ theme, size }) => theme.typography.fontSize[size]};
