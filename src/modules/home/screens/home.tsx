@@ -1,7 +1,8 @@
-import Ionicons from '@react-native-vector-icons/ionicons'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import Toast from 'react-native-toast-message'
+
+import { Ionicons } from '@expo/vector-icons'
 
 import { Button, Text } from '@/components'
 import { useTheme } from '@/hooks'

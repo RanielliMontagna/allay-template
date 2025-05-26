@@ -17,3 +17,11 @@ jest.mock('react-native-safe-area-context', () => mockSafeAreaContext)
 
 // Mock react-native-reanimated
 setUpTests()
+
+// Mock @expo/vector-icons to avoid issues with native modules
+jest.mock('@expo/vector-icons', () => {
+  const React = require('react');
+  return {
+    Ionicons: (props: Record<string, unknown>) => React.createElement('Icon', props),
+  };
+});
