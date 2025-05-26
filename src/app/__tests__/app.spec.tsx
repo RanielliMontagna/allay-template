@@ -4,6 +4,16 @@ import { act, render, waitFor } from '@/shared/utils/jest'
 import { App } from '../app'
 
 describe('App', () => {
+  jest.spyOn(console, 'error').mockImplementation(message => {
+    const messageString =
+      'Warning: An update to %s inside a test was not wrapped in act'
+
+    if (message.includes(messageString)) {
+      return
+    }
+    console.error(message)
+  })
+
   it('should render the app', async () => {
     const { getByText } = render(<App />)
 

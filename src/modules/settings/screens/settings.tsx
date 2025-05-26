@@ -1,6 +1,6 @@
-import { Text } from 'react-native'
 import { useTranslation } from 'react-i18next'
 
+import { Text } from '@/components'
 import { SettingsContainer } from './settings.styles'
 
 export function Settings() {
@@ -8,7 +8,9 @@ export function Settings() {
 
   return (
     <SettingsContainer>
-      <Text>{t('settings.title')}</Text>
+      <Text weight="bold" size="lg">
+        {t('settings.title')}
+      </Text>
       <Text>{t('settings.description')}</Text>
     </SettingsContainer>
   )

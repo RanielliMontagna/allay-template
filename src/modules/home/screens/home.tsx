@@ -1,9 +1,10 @@
 import React from 'react'
 import Toast from 'react-native-toast-message'
 
+import { Text } from '@/components'
 import { useTheme } from '@/hooks'
 import { useTranslation } from 'react-i18next'
-import { ButtonText, HomeContainer, Title, ToggleButton } from './home.styles'
+import { ButtonText, HomeContainer, ToggleButton } from './home.styles'
 
 export function Home() {
   const { t } = useTranslation()
@@ -22,10 +23,10 @@ export function Home() {
 
   return (
     <HomeContainer>
-      <Title testID="current-theme">
+      <Text testID="current-theme" size="lg" weight="bold">
         {t('home.currentTheme')}:{' '}
         {themeMode === 'dark' ? t('home.darkMode') : t('home.lightMode')}
-      </Title>
+      </Text>
       <ToggleButton onPress={handleThemeChange}>
         <ButtonText>{t('home.changeTheme')}</ButtonText>
       </ToggleButton>
