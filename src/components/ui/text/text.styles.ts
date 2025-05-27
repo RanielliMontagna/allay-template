@@ -2,7 +2,7 @@ import styled from '@emotion/native'
 import Animated from 'react-native-reanimated'
 import type { CustomTextProps } from './text.types'
 
-import { resolveColor } from '@/shared/utils/resolveColor'
+import { resolveColor } from '@/shared/utils'
 
 export const StyledText = styled(Animated.Text)<CustomTextProps>`
   font-size: ${({ theme, size }) => theme.typography.fontSize[size]};

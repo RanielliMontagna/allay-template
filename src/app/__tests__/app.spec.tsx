@@ -1,6 +1,6 @@
 import translations from '@/locales/en-US'
 import { useAppStore } from '@/shared/stores'
-import { act, render, waitFor } from '@/shared/utils/jest'
+import { act, render, waitFor } from '@/shared/utils/jest/jest'
 import { App } from '../app'
 
 describe('App', () => {

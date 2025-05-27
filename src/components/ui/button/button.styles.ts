@@ -1,7 +1,7 @@
 import styled from '@emotion/native'
 import type { StyledButtonProps } from './button.types'
 
-import { resolveColor } from '@/shared/utils/resolveColor'
+import { resolveColor } from '@/shared/utils'
 import { TouchableOpacity } from 'react-native'
 import { getButtonPadding } from './button.helper'
 

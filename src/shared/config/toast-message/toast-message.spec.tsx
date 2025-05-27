@@ -1,4 +1,4 @@
-import { render } from '@/shared/utils/jest'
+import { render } from '@/shared/utils/jest/jest'
 import { toastConfig } from './toast-message'
 
 describe('toastConfig', () => {

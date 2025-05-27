@@ -1,4 +1,4 @@
-import { renderHook } from '@/shared/utils/jest'
+import { renderHook } from '@/shared/utils/jest/jest'
 import { useCustomQuery } from './useQuery'
 
 describe('useQuery', () => {

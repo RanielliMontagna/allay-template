@@ -7,6 +7,7 @@ import { Ionicons } from '@expo/vector-icons'
 import { Button, Text } from '@/components'
 import { useTheme } from '@/hooks'
 
+import { Avatar } from '@/components/ui/avatar/avatar'
 import { HomeContainer } from './home.styles'
 
 export function Home() {
@@ -26,6 +27,7 @@ export function Home() {
 
   return (
     <HomeContainer>
+      <Avatar fallbackSource="Matheus Cunha" size="lg" shape="circle" />
       <Text testID="current-theme" size="lg" weight="bold">
         {t('home.currentTheme')}:{' '}
         {themeMode === 'dark' ? t('home.darkMode') : t('home.lightMode')}

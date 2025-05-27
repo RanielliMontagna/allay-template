@@ -1,4 +1,4 @@
-import { render } from '@/shared/utils/jest'
+import { render } from '@/shared/utils/jest/jest'
 import { LoadingIndicator } from './loadingIndicator'
 
 const mockUseAppStore = jest.fn(() => ({ isLoading: false }))

@@ -1,6 +1,5 @@
-import { render } from '@/shared/utils/jest'
+import { render } from '@/shared/utils/jest/jest'
 
-import { theme } from '@/theme'
 import { Text } from '../text/text'
 import { Button } from './button'
 

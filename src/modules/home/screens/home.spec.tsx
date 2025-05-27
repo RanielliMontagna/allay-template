@@ -1,4 +1,4 @@
-import { act, fireEvent, render } from '@/shared/utils/jest'
+import { act, fireEvent, render } from '@/shared/utils/jest/jest'
 
 import translations from '@/locales/en-US'
 import { Home } from './home'
