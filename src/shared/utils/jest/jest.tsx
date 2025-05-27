@@ -1,3 +1,4 @@
+import { i18n, initI18n, queryClient } from '@/shared/config'
 import { theme } from '@/theme'
 import { ThemeProvider } from '@emotion/react'
 import { QueryClientProvider } from '@tanstack/react-query'
@@ -7,7 +8,6 @@ import {
   renderHook,
 } from '@testing-library/react-native'
 import { I18nextProvider } from 'react-i18next'
-import { i18n, initI18n, queryClient } from '@/shared/config'
 
 beforeAll(async () => {
   await initI18n()

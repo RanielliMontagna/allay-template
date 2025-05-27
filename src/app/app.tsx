@@ -42,16 +42,18 @@ function AppContent() {
 
   if (!isReady) return <LoadingIndicator />
 
+  const theme = createTheme(themeMode)
+
   return (
     <SafeAreaProvider>
       <StatusBar
         barStyle={themeMode === 'dark' ? 'light-content' : 'dark-content'}
-        backgroundColor="transparent"
+        backgroundColor={theme.colors.background}
         translucent
       />
       <I18nextProvider i18n={i18n}>
         <QueryClientProvider client={queryClient}>
-          <ThemeProvider theme={createTheme(themeMode)}>
+          <ThemeProvider theme={theme}>
             <Navigation />
             <LoadingIndicator />
             <OfflineBar />

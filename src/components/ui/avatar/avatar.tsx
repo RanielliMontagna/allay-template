@@ -1,8 +1,8 @@
 import { Image } from 'react-native'
 
+import { getInitials } from '@/shared/utils'
 import { AvatarContainer, AvatarFallbackText } from './avatar.styles'
 import type { AvatarProps } from './avatar.types'
-import { getInitials } from '@/shared/utils'
 
 export const Avatar: React.FC<AvatarProps> = ({
   source,

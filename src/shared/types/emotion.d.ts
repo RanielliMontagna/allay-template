@@ -1,5 +1,6 @@
 import '@emotion/react'
 
+import type { ThemeMode } from '@/theme'
 import type { Colors } from '@/theme/colors'
 import type { Radius } from '@/theme/radius'
 import type { Spacing } from '@/theme/spacing'
@@ -21,5 +22,6 @@ declare module '@emotion/react' {
     }
     spacing: Spacing
     radius: Radius
+    mode: ThemeMode
   }
 }

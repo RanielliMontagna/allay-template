@@ -7,6 +7,7 @@ import { Ionicons } from '@expo/vector-icons'
 import { useTheme } from '@/hooks'
 import { Home } from '@/modules/home'
 import { Settings } from '@/modules/settings'
+import TabLayout from './layout/layout'
 
 const Tab = createBottomTabNavigator()
 const Stack = createNativeStackNavigator()
@@ -52,8 +53,8 @@ function BottomTabs() {
         },
       })}
     >
-      <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Settings" component={Settings} />
+      <Tab.Screen name="Home" component={Home} layout={TabLayout} />
+      <Tab.Screen name="Settings" component={Settings} layout={TabLayout} />
     </Tab.Navigator>
   )
 }
