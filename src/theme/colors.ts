@@ -1,7 +1,7 @@
 const lightColors = {
   primary: '#4F46E5', // Indigo 600
   background: '#FFFFFF', // White
-  secondary: '#E0E7FF', // Light Indigo
+  secondary: '#312E81', // Light Indigo
   text: '#1F2937', // Dark Gray
   error: '#EF4444', // Red 500
   success: '#10B981', // Green 500
@@ -28,9 +28,9 @@ const darkColors = {
   background: '#0D1117',
   secondary: '#312E81',
   text: '#F9FAFB',
-  error: '#F87171',
-  success: '#34D399',
-  warning: '#FBBF24',
+  error: '#EF4444',
+  warning: '#EAB308',
+  success: '#22C55E',
   info: '#60A5FA',
   gray: {
     50: '#161B22',

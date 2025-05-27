@@ -4,10 +4,9 @@ import Toast from 'react-native-toast-message'
 
 import { Ionicons } from '@expo/vector-icons'
 
-import { Button, Text } from '@/components'
+import { Avatar, Badge, Button, Text } from '@/components'
 import { useTheme } from '@/hooks'
 
-import { Avatar } from '@/components/ui/avatar/avatar'
 import { HomeContainer } from './home.styles'
 
 export function Home() {
@@ -27,6 +26,9 @@ export function Home() {
 
   return (
     <HomeContainer>
+      <Badge size="sm" color="success">
+        Teste
+      </Badge>
       <Avatar fallbackSource="Matheus Cunha" size="lg" shape="circle" />
       <Text testID="current-theme" size="lg" weight="bold">
         {t('home.currentTheme')}:{' '}
