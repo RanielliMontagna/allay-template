@@ -8,6 +8,8 @@ import { useTheme } from '@/hooks'
 import { Home } from '@/modules/home'
 import { Settings } from '@/modules/settings'
 import TabLayout from './layout/layout'
+import { useTranslation } from 'react-i18next'
+import { capitalize } from '@/shared/utils'
 
 const Tab = createBottomTabNavigator()
 const Stack = createNativeStackNavigator()
@@ -27,6 +29,7 @@ const routes = {
 
 function BottomTabs() {
   const { theme } = useTheme()
+  const { t } = useTranslation()
 
   return (
     <Tab.Navigator
@@ -53,8 +56,18 @@ function BottomTabs() {
         },
       })}
     >
-      <Tab.Screen name="Home" component={Home} layout={TabLayout} />
-      <Tab.Screen name="Settings" component={Settings} layout={TabLayout} />
+      <Tab.Screen
+        name="Home"
+        options={{ tabBarLabel: capitalize(t('home.title')) }}
+        component={Home}
+        layout={TabLayout}
+      />
+      <Tab.Screen
+        name="Settings"
+        options={{ tabBarLabel: capitalize(t('settings.title')) }}
+        component={Settings}
+        layout={TabLayout}
+      />
     </Tab.Navigator>
   )
 }
