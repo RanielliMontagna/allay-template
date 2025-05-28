@@ -77,7 +77,7 @@ export const SelectLanguageBottomSheet = React.forwardRef<
           // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
           useEffect(() => {
             if (option.isSelected) {
-              scale.value = withTiming(1.02, { duration: 300 })
+              scale.value = withTiming(1.01, { duration: 300 })
               opacity.value = withTiming(1, { duration: 300 })
             } else {
               scale.value = withTiming(1, { duration: 300 })
