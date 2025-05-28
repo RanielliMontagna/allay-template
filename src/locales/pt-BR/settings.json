@@ -1,6 +1,16 @@
 {
   "settings": {
     "title": "Configurações",
-    "description": "Configure suas preferências"
+    "preferences": "Preferências",
+    "language": {
+      "title": "Idioma",
+      "en": "Inglês",
+      "pt": "Português"
+    },
+    "theme": {
+      "title": "Tema",
+      "light": "Claro",
+      "dark": "Escuro"
+    }
   }
 }

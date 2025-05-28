@@ -1,5 +1,6 @@
 {
   "home": {
+    "title": "Home",
     "currentTheme": "Tema atual",
     "changeTheme": "Mudar tema",
     "darkMode": "Modo escuro",

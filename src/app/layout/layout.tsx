@@ -4,6 +4,7 @@ import type { ParamListBase, RouteProp } from '@react-navigation/native'
 import { ScreenHeader } from '@/components'
 
 import { Content, LayoutContainer } from './layout.styles'
+import { useTranslation } from 'react-i18next'
 
 interface TabLayoutProps
   extends React.PropsWithChildren<{
@@ -16,9 +17,16 @@ export default function TabLayout({
   route,
   navigation,
 }: TabLayoutProps) {
+  const { t } = useTranslation()
+
   return (
     <LayoutContainer>
-      <ScreenHeader title={route.name} handleBack={navigation.canGoBack() ? () => navigation.goBack() : undefined} />
+      <ScreenHeader
+        title={t(`${route.name.toLocaleLowerCase()}.title`)}
+        handleBack={
+          navigation.canGoBack() ? () => navigation.goBack() : undefined
+        }
+      />
       <Content>{children}</Content>
     </LayoutContainer>
   )

@@ -25,6 +25,7 @@ const initI18n = async () => {
     interpolation: {
       escapeValue: false,
     },
+    returnObjects: true,
   })
 }
 

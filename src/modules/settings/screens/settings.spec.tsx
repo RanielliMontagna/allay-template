@@ -7,7 +7,6 @@ describe('Settings', () => {
   it('should render the settings screen', () => {
     const { getByText } = render(<Settings />)
 
-    expect(getByText(translations.settings.title)).toBeTruthy()
-    expect(getByText(translations.settings.description)).toBeTruthy()
+    expect(getByText(translations.settings.preferences)).toBeTruthy()
   })
 })
