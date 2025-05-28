@@ -16,7 +16,7 @@ export function ThemeSettings() {
   const { t } = useTranslation()
 
   return (
-    <PreferenceContainer>
+    <PreferenceContainer testID="theme-settings">
       <PreferenceDescriptionContainer>
         <IconContainer>
           <Ionicons

@@ -1,7 +1,7 @@
 import { Ionicons } from '@expo/vector-icons'
 
 import { useTheme } from '@/hooks'
-import { BottomSheet, Text } from '@/components'
+import { Text } from '@/components'
 
 import {
   IconContainer,
@@ -10,13 +10,8 @@ import {
   PreferenceOptionContainer,
 } from '../settings.styles'
 import { useLanguage } from './useLanguage'
-import {
-  BottomSheetContainer,
-  LanguageHeaderContainer,
-  LanguageIconContainer,
-  LanguageOptionContainer,
-} from './language.styles'
-import { useTranslation } from 'react-i18next'
+
+import { SelectLanguageBottomSheet } from '../../components/selectLanguageBottomSheet/selectLanguageBottomSheet'
 
 export function LanguageSettings() {
   const {
@@ -27,10 +22,12 @@ export function LanguageSettings() {
     handleOpenChangeLanguageBottomSheet,
   } = useLanguage()
   const { theme } = useTheme()
-  const { i18n } = useTranslation()
 
   return (
-    <PreferenceContainer onPress={handleOpenChangeLanguageBottomSheet}>
+    <PreferenceContainer
+      onPress={handleOpenChangeLanguageBottomSheet}
+      testID="language-settings"
+    >
       <PreferenceDescriptionContainer>
         <IconContainer>
           <Ionicons
@@ -52,44 +49,7 @@ export function LanguageSettings() {
           color={theme.colors.gray[500]}
         />
       </PreferenceOptionContainer>
-      <BottomSheet ref={changeLanguageBottomSheetRef}>
-        <BottomSheetContainer>
-          <LanguageHeaderContainer>
-            <LanguageIconContainer>
-              <Ionicons
-                name="earth-outline"
-                size={24}
-                color={theme.colors.gray[900]}
-              />
-            </LanguageIconContainer>
-            <Text size="lg" weight="bold">
-              {t('settings.language.select')}
-            </Text>
-            <Text color="gray.500" size="sm">
-              {t('settings.language.selectDescription')}
-            </Text>
-          </LanguageHeaderContainer>
-          {i18n.languages.map(language => (
-            <LanguageOptionContainer
-              key={language}
-              isSelected={i18n.language === language}
-            >
-              <Text size="sm" color="gray.900">
-                {language === 'pt-BR'
-                  ? t('settings.language.pt')
-                  : t('settings.language.en')}
-              </Text>
-              {i18n.language === language && (
-                <Ionicons
-                  name="checkmark-circle"
-                  size={24}
-                  color={theme.colors.primary}
-                />
-              )}
-            </LanguageOptionContainer>
-          ))}
-        </BottomSheetContainer>
-      </BottomSheet>
+      <SelectLanguageBottomSheet ref={changeLanguageBottomSheetRef} />
     </PreferenceContainer>
   )
 }
