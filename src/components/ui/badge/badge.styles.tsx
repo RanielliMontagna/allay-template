@@ -1,8 +1,8 @@
 import styled from '@emotion/native'
 import Animated from 'react-native-reanimated'
 
-import type { BadgeStylesProps } from './badge.types'
 import { Text } from '../text/text'
+import type { BadgeStylesProps } from './badge.types'
 
 export const BadgeContainer = styled(Animated.View)<BadgeStylesProps>`
     border-radius: ${({ theme }) => theme.radius.md};

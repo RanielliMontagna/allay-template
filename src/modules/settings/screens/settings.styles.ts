@@ -9,7 +9,7 @@ export const SettingsContainer = styled.View`
   gap: ${({ theme }) => theme.spacing[2]};
 `
 
-export const PreferenceContainer = styled(Animated.View)`
+export const PreferenceContainer = styled.TouchableOpacity`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;

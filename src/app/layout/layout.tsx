@@ -3,8 +3,8 @@ import type { ParamListBase, RouteProp } from '@react-navigation/native'
 
 import { ScreenHeader } from '@/components'
 
-import { Content, LayoutContainer } from './layout.styles'
 import { useTranslation } from 'react-i18next'
+import { Content, LayoutContainer } from './layout.styles'
 
 interface TabLayoutProps
   extends React.PropsWithChildren<{

@@ -5,7 +5,9 @@
     "language": {
       "title": "Idioma",
       "en": "Inglês",
-      "pt": "Português"
+      "pt": "Português",
+      "select": "Selecionar Idioma",
+      "selectDescription": "Escolha seu idioma preferido para o aplicativo."
     },
     "theme": {
       "title": "Tema",

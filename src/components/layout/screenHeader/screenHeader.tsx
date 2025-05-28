@@ -1,9 +1,9 @@
 import { BackButton, ScreenHeaderContainer } from './screenHeader.styles'
 import type { ScreenHeaderProps } from './screenHeader.types'
 
-import { Ionicons } from '@expo/vector-icons'
 import { Text } from '@/components/ui/text/text'
 import { useTheme } from '@/hooks'
+import { Ionicons } from '@expo/vector-icons'
 
 export function ScreenHeader({ title, handleBack }: ScreenHeaderProps) {
   const { theme } = useTheme()
