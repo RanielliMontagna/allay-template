@@ -1,5 +1,5 @@
-import { useTranslation } from 'react-i18next'
 import { Ionicons } from '@expo/vector-icons'
+import { useTranslation } from 'react-i18next'
 
 import { Text } from '@/components'
 import { useTheme } from '@/hooks'

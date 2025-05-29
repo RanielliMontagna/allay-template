@@ -1,13 +1,13 @@
 import React, { useCallback } from 'react'
 
+import { useTheme } from '@/hooks'
 import {
   BottomSheetBackdrop,
-  BottomSheetModal,
-  BottomSheetView,
   type BottomSheetBackdropProps,
+  BottomSheetModal,
   type BottomSheetModalProps,
+  BottomSheetView,
 } from '@gorhom/bottom-sheet'
-import { useTheme } from '@/hooks'
 
 const BottomSheetComponent = React.forwardRef<
   React.ElementRef<typeof BottomSheetModal>,
@@ -15,6 +15,7 @@ const BottomSheetComponent = React.forwardRef<
 >(({ children, snapPoints, ...rest }, ref) => {
   const { theme } = useTheme()
 
+  /* istanbul ignore next */
   const renderBackdrop = useCallback(
     (props: BottomSheetBackdropProps) => (
       <BottomSheetBackdrop {...props} appearsOnIndex={1} />

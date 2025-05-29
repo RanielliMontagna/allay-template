@@ -1,6 +1,6 @@
 import { ThemeProvider } from '@emotion/react'
-import { QueryClientProvider } from '@tanstack/react-query'
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet'
+import { QueryClientProvider } from '@tanstack/react-query'
 import React, { useEffect, useState } from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { StatusBar } from 'react-native'

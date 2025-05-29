@@ -1,21 +1,19 @@
 import React, { useEffect } from 'react'
 
-import { useTranslation } from 'react-i18next'
 import { BottomSheet, Text } from '@/components'
 import { Ionicons } from '@expo/vector-icons'
+import { useTranslation } from 'react-i18next'
 
 import { useTheme } from '@/hooks'
 
+import type { BottomSheetModal } from '@gorhom/bottom-sheet'
 import {
   BottomSheetContainer,
   LanguageHeaderContainer,
   LanguageIconContainer,
   LanguageOptionContainer,
 } from './selectLanguageBottomSheet.styles'
-import type { BottomSheetModal } from '@gorhom/bottom-sheet'
 
-import PtFlag from '../../assets/flags/pt'
-import EnFlag from '../../assets/flags/en'
 import { View } from 'react-native'
 import Animated, {
   useAnimatedStyle,
@@ -23,6 +21,8 @@ import Animated, {
   withTiming,
   ZoomIn,
 } from 'react-native-reanimated'
+import EnFlag from '../../assets/flags/en'
+import PtFlag from '../../assets/flags/pt'
 
 type SelectLanguageBottomSheetProps = Omit<
   React.ComponentProps<typeof BottomSheet>,

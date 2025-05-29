@@ -7,9 +7,9 @@ import { Ionicons } from '@expo/vector-icons'
 import { useTheme } from '@/hooks'
 import { Home } from '@/modules/home'
 import { Settings } from '@/modules/settings'
-import TabLayout from './layout/layout'
-import { useTranslation } from 'react-i18next'
 import { capitalize } from '@/shared/utils'
+import { useTranslation } from 'react-i18next'
+import TabLayout from './layout/layout'
 
 const Tab = createBottomTabNavigator()
 const Stack = createNativeStackNavigator()
@@ -57,12 +57,14 @@ function BottomTabs() {
       })}
     >
       <Tab.Screen
+        key={routes.Home.name}
         name="Home"
         options={{ tabBarLabel: capitalize(t('home.title')) }}
         component={Home}
         layout={TabLayout}
       />
       <Tab.Screen
+        key={routes.Settings.name}
         name="Settings"
         options={{ tabBarLabel: capitalize(t('settings.title')) }}
         component={Settings}

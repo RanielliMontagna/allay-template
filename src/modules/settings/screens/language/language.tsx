@@ -1,7 +1,7 @@
 import { Ionicons } from '@expo/vector-icons'
 
-import { useTheme } from '@/hooks'
 import { Text } from '@/components'
+import { useTheme } from '@/hooks'
 
 import {
   IconContainer,

@@ -11,7 +11,7 @@ export function ScreenHeader({ title, handleBack }: ScreenHeaderProps) {
   return (
     <ScreenHeaderContainer>
       {handleBack && (
-        <BackButton onPress={handleBack}>
+        <BackButton onPress={handleBack} testID="screen-header-back-button">
           <Ionicons
             name="arrow-back"
             size={22}

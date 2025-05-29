@@ -10,6 +10,7 @@ import {
 } from '@testing-library/react-native'
 import { I18nextProvider } from 'react-i18next'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
 
 beforeAll(async () => {
   await initI18n()
@@ -17,15 +18,17 @@ beforeAll(async () => {
 })
 
 const Wrapper = ({ children }: { children: React.ReactNode }) => (
-  <GestureHandlerRootView>
-    <BottomSheetModalProvider>
-      <I18nextProvider i18n={i18n}>
-        <QueryClientProvider client={queryClient}>
-          <ThemeProvider theme={theme}>{children}</ThemeProvider>
-        </QueryClientProvider>
-      </I18nextProvider>
-    </BottomSheetModalProvider>
-  </GestureHandlerRootView>
+  <SafeAreaProvider>
+    <I18nextProvider i18n={i18n}>
+      <QueryClientProvider client={queryClient}>
+        <ThemeProvider theme={theme}>
+          <GestureHandlerRootView>
+            <BottomSheetModalProvider>{children}</BottomSheetModalProvider>
+          </GestureHandlerRootView>
+        </ThemeProvider>
+      </QueryClientProvider>
+    </I18nextProvider>
+  </SafeAreaProvider>
 )
 
 const renderWithProviders = (ui: React.ReactElement, options?: RenderOptions) =>
