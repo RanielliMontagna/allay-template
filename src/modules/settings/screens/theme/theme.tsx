@@ -2,7 +2,6 @@ import { Ionicons } from '@expo/vector-icons'
 import { useTranslation } from 'react-i18next'
 
 import { Text } from '@/components'
-import { useTheme } from '@/hooks'
 
 import {
   IconContainer,
@@ -10,13 +9,23 @@ import {
   PreferenceDescriptionContainer,
   PreferenceOptionContainer,
 } from '../settings.styles'
+import { SelectThemeBottomSheet } from '../../components/selectThemeBottomSheet/selectThemeBottomSheet'
+import { useTheme } from './useTheme'
 
 export function ThemeSettings() {
-  const { theme, themeMode } = useTheme()
+  const {
+    theme,
+    themeMode,
+    changeThemeBottomSheetRef,
+    handleOpenChangeThemeBottomSheet,
+  } = useTheme()
   const { t } = useTranslation()
 
   return (
-    <PreferenceContainer testID="theme-settings">
+    <PreferenceContainer
+      testID="theme-settings"
+      onPress={handleOpenChangeThemeBottomSheet}
+    >
       <PreferenceDescriptionContainer>
         <IconContainer>
           <Ionicons
@@ -38,6 +47,7 @@ export function ThemeSettings() {
           color={theme.colors.gray[500]}
         />
       </PreferenceOptionContainer>
+      <SelectThemeBottomSheet ref={changeThemeBottomSheetRef} />
     </PreferenceContainer>
   )
 }

@@ -12,7 +12,9 @@
     "theme": {
       "title": "Theme",
       "light": "Light",
-      "dark": "Dark"
+      "dark": "Dark",
+      "select": "Select Theme",
+      "selectDescription": "Choose your preferred theme for the application."
     }
   }
 }

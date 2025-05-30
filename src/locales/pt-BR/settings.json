@@ -12,7 +12,9 @@
     "theme": {
       "title": "Tema",
       "light": "Claro",
-      "dark": "Escuro"
+      "dark": "Escuro",
+      "select": "Selecionar Tema",
+      "selectDescription": "Escolha seu tema preferido para o aplicativo."
     }
   }
 }
