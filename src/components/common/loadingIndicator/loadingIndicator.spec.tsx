@@ -1,4 +1,4 @@
-import { render } from '@/shared/utils/jest'
+import { render } from '@/shared/utils/jest/jest'
 import { LoadingIndicator } from './loadingIndicator'
 
 const mockUseAppStore = jest.fn(() => ({ isLoading: false }))
@@ -9,8 +9,10 @@ jest.mock('@/shared/stores/app/app', () => ({
 describe('LoadingIndicator', () => {
   it('should not render when isLoading is false', () => {
     mockUseAppStore.mockReturnValue({ isLoading: false })
-    const { toJSON } = render(<LoadingIndicator />)
-    expect(toJSON()).toBeNull()
+    const { getByTestId } = render(<LoadingIndicator />)
+    expect(() => getByTestId('activity-indicator')).toThrow(
+      'Unable to find an element with testID: activity-indicator',
+    )
   })
 
   it('should render when isLoading is true', () => {

@@ -1,0 +1,20 @@
+{
+  "settings": {
+    "title": "Settings",
+    "preferences": "Preferences",
+    "language": {
+      "title": "Language",
+      "en": "English",
+      "pt": "Portuguese",
+      "select": "Select Language",
+      "selectDescription": "Choose your preferred language for the application."
+    },
+    "theme": {
+      "title": "Theme",
+      "light": "Light",
+      "dark": "Dark",
+      "select": "Select Theme",
+      "selectDescription": "Choose your preferred theme for the application."
+    }
+  }
+}

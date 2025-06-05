@@ -22,9 +22,9 @@ const initI18n = async () => {
     resources,
     lng: savedLanguage,
     fallbackLng: 'en-US',
-    interpolation: {
-      escapeValue: false,
-    },
+    supportedLngs: ['pt-BR', 'en-US'],
+    interpolation: { escapeValue: false },
+    returnObjects: true,
   })
 }
 

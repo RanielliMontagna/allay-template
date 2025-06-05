@@ -1,5 +1,5 @@
 import { useAppStore } from '@/shared/stores'
-import { renderHook } from '@/shared/utils/jest'
+import { renderHook } from '@/shared/utils/jest/jest'
 import NetInfo from '@react-native-community/netinfo'
 import { useNetInfo } from './useNetInfo'
 

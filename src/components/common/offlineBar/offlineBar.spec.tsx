@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { OfflineBar } from '@/components'
-import { render } from '@/shared/utils/jest'
+import { render } from '@/shared/utils/jest/jest'
 
 jest.mock('@/shared/stores', () => ({
   useAppStore: jest.fn(),
