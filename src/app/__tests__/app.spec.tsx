@@ -15,15 +15,15 @@ describe('App', () => {
   })
 
   it('should render the app', async () => {
-    const { getByText } = render(<App />)
+    const { getAllByText } = render(<App />)
 
     await waitFor(() => {
-      expect(getByText(translations.home.changeTheme)).toBeTruthy()
+      expect(getAllByText(translations.home.title)).toHaveLength(3)
     })
   })
 
   it('should render with dark theme', async () => {
-    const { getByText } = render(<App />)
+    const { getAllByText } = render(<App />)
 
     act(() => {
       // Set the theme to dark
@@ -31,7 +31,7 @@ describe('App', () => {
     })
 
     await waitFor(() => {
-      expect(getByText(translations.home.changeTheme)).toBeTruthy()
+      expect(getAllByText(translations.home.title)).toHaveLength(3)
     })
   })
 
@@ -39,7 +39,7 @@ describe('App', () => {
     const { getByText, getAllByText, getByTestId } = render(<App />)
 
     await waitFor(() => {
-      expect(getAllByText(translations.home.title)).toHaveLength(2)
+      expect(getAllByText(translations.home.title)).toHaveLength(3)
     })
 
     act(() => {
@@ -53,7 +53,7 @@ describe('App', () => {
     })
 
     await waitFor(() => {
-      expect(getAllByText(translations.home.title)).toHaveLength(2)
+      expect(getAllByText(translations.home.title)).toHaveLength(3)
     })
   })
 })

@@ -1,11 +1,5 @@
 {
   "home": {
-    "title": "Home",
-    "currentTheme": "Tema atual",
-    "changeTheme": "Mudar tema",
-    "darkMode": "Modo escuro",
-    "lightMode": "Modo claro",
-    "themeChanged": "Tema alterado",
-    "themeChangedDescription": "O tema foi alterado para {{theme}}."
+    "title": "Home"
   }
 }
