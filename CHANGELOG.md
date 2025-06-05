@@ -1,5 +1,30 @@
 # Changelog
 
+## [1.4.0](https://github.com/RanielliMontagna/allay-template/compare/v1.3.0...v1.4.0) (2025-06-05)
+
+
+### Features
+
+* add Badge component with styles, tests, and integrate into Home screen ([d9c7b67](https://github.com/RanielliMontagna/allay-template/commit/d9c7b67c2bdd63272d7002928c667ebe8455ecf0))
+* add bottom tab navigation and settings screen with updated styles ([d35017d](https://github.com/RanielliMontagna/allay-template/commit/d35017de9b138356be815eab82baf9a2f38c8368))
+* add Button component with styles, helper functions, and tests ([e902461](https://github.com/RanielliMontagna/allay-template/commit/e902461ed7ccccd7c7ee3b325c1074ccee5e6862))
+* add capitalize utility functions and tests; integrate into navigation for dynamic tab labels ([dfb050e](https://github.com/RanielliMontagna/allay-template/commit/dfb050eb8b431ed94432b71bcadb4044dc86f5ca))
+* add language selection bottom sheet with flag components and styles; update package dependencies ([ac1201c](https://github.com/RanielliMontagna/allay-template/commit/ac1201ce016a88cec4468c4e07c5190642b80145))
+* add settings localization and update settings screen to use translations ([bf33859](https://github.com/RanielliMontagna/allay-template/commit/bf33859ffb8d102d887a57ca95cf495d0a27e94d))
+* add text component with customizable styles ([9007ca4](https://github.com/RanielliMontagna/allay-template/commit/9007ca43b4f7bdab1aa2a2905d3420e8200719f9))
+* add theme selection bottom sheet with styles and functionality; update settings translations ([b259239](https://github.com/RanielliMontagna/allay-template/commit/b2592390c679c2be0ca79ccc90bf3cccc9a169d9))
+* enhance settings screen with language and theme preferences; add i18n support for translations ([f46641f](https://github.com/RanielliMontagna/allay-template/commit/f46641f5b21d938b90a98d5d4ab2e827111b8c9f))
+* implement Avatar component; refactor imports for consistency ([6956bbb](https://github.com/RanielliMontagna/allay-template/commit/6956bbb422371ed02022737f517d96c505a5d6be))
+* implement layout components and integrate them into the app; add ScreenHeader and TabLayout ([a6e97e1](https://github.com/RanielliMontagna/allay-template/commit/a6e97e1bde2a2d28173845a2b006f7ba850d6e3d))
+* integrate react-native-toast-message for theme change notifications ([7ee1836](https://github.com/RanielliMontagna/allay-template/commit/7ee1836bec25c4bb4975a516a4ffbbfa1bd492da))
+* refactor theme types to use centralized definitions for colors, spacing, radius, and typography ([6aa8890](https://github.com/RanielliMontagna/allay-template/commit/6aa8890ab6116c39ff44ec5598eece9a3f5cb532))
+* update icon imports to use @expo/vector-icons and mock it in tests ([a7b22aa](https://github.com/RanielliMontagna/allay-template/commit/a7b22aa2be603e6d656ae311f33ee8b85e855008))
+
+
+### Bug Fixes
+
+* adjust scale animation value for selected language option in bottom sheet ([d114c90](https://github.com/RanielliMontagna/allay-template/commit/d114c906f153f8c1314b316f122e9a9f1e0a1afc))
+
 ## [1.3.0](https://github.com/RanielliMontagna/allay-template/compare/v1.2.0...v1.3.0) (2025-05-22)
 
 
